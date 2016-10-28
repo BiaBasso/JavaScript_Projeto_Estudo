@@ -1,14 +1,14 @@
 /* reduce processa um array e no final da um único resultado, neste caso,
  o segundo parametro é a inicialização do total que seria 0, e depois ele usa o valor anterior encontrado */
 
-class NegociacoesView{
+class NegociacoesView extends View {
 
     constructor(elemento){
 
-        this._elemento = elemento;
+        super(elemento);
     }
 
-    _template(model){
+    template(model){
 
         return `
             <table class="table table-hover table-bordered">
@@ -39,11 +39,6 @@ class NegociacoesView{
                 </td>
             </tfoot>
         </table> `;
-    }
-
-    update(model){
-
-        this._elemento.innerHTML = this._template(model); // converte essa string que estou passando em elementos do DOM
     }
 }
 
